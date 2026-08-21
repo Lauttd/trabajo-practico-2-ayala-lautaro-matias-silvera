@@ -6,9 +6,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Comandos
 
-- Instalar dependencias: `npm install --legacy-peer-deps` — el flag es obligatorio por conflictos de peer-deps con React 19.
-- Levantar el dev server de Expo: `npm start`.
-- Abrir en plataforma específica: `npm run android`, `npm run ios`, `npm run web`.
+- Instalar dependencias: `npm install`
+- Levantar el dev server de Expo: `npm run start`.
 
 No hay tests ni linter configurados.
 
