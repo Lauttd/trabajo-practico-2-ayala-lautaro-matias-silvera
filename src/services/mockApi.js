@@ -8,10 +8,26 @@ const CANCHAS_INICIALES = [
   { id: '6', nombre: 'Canchas La Redonda', ubicacion: 'Av. González Lelong 430', precioHora: 16000, imagen: 'https://imgs.search.brave.com/vKE2fpfF3Zqfwc-LyXTPR7Gda1f3iMhmz2fHU-uM3eU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS1jZG4udHJpcGFk/dmlzb3IuY29tL21l/ZGlhL3Bob3RvLW8v/MDcvOGMvMDYvNWQv/ZWwtY2xhc2ljby1m/dXRib2wtNS5qcGc' }
 ];
 
+const HORARIOS_MOCK = [
+  { id: '1', hora: '16:00', disponible: false },
+  { id: '2', hora: '17:00', disponible: true },
+  { id: '3', hora: '18:00', disponible: true },
+  { id: '4', hora: '19:00', disponible: false },
+  { id: '5', hora: '20:00', disponible: false },
+  { id: '6', hora: '21:00', disponible: true },
+  { id: '7', hora: '22:00', disponible: true },
+  { id: '8', hora: '23:00', disponible: true },
+];
+
 let misReservasMock = [];
 
 export const apiGetCanchas = async () => {
   return new Promise(resolve => setTimeout(() => resolve([...CANCHAS_INICIALES]), 800));
+};
+
+export const apiGetHorarios = async (idCancha) => {
+  // El idCancha permite diferenciar la grilla por complejo en el futuro.
+  return new Promise(resolve => setTimeout(() => resolve([...HORARIOS_MOCK]), 500));
 };
 
 export const apiGetReservas = async () => {
